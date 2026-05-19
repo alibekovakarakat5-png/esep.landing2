@@ -7,22 +7,22 @@ const ITEMS = [
   {
     icon: Lock,
     title: 'Шифрование на каждом уровне',
-    text: 'TLS 1.3 между вами и нашим API. Шифрование данных at-rest в Postgres. Хэширование паролей bcrypt. Никаких ИИН в логах в открытом виде.',
+    text: 'Защищённое соединение TLS 1.3 между вами и нашим сервисом. Шифрование данных в базе. Безопасное хранение паролей. ИИН никогда не появляется в журналах в открытом виде.',
   },
   {
     icon: KeyRound,
-    title: 'Изолированные API-ключи',
-    text: 'У каждого клиента — свой X-Platform-Key с feature flags и лимитами. Никакого пересечения данных. Лог каждого запроса в platform_audit_log.',
+    title: 'Изолированные ключи доступа',
+    text: 'У каждого клиента — свой корпоративный ключ с настройками сервисов и лимитами. Никакого пересечения данных между клиентами. Полный журнал каждого запроса для аудита.',
   },
   {
     icon: Server,
-    title: 'Multi-region инфраструктура',
-    text: 'Hosting в Astana и Алматы. Бэкапы каждые 6 часов в encrypted offsite storage. Полный data residency в Республике Казахстан.',
+    title: 'Инфраструктура в Казахстане',
+    text: 'Серверы в Астане и Алматы. Резервные копии каждые 6 часов в зашифрованном виде. Все данные хранятся в Республике Казахстан.',
   },
   {
     icon: FileCheck,
     title: 'Готовы к аудиту',
-    text: 'NDA по умолчанию. DPA — типовой или ваш шаблон. Compliance с Законом 94-V РК «О персональных данных». Pre-audit ISO 27001 в работе.',
+    text: 'Соглашение о неразглашении по умолчанию. Договор об обработке данных — типовой или ваш шаблон. Соответствие Закону 94-V РК «О персональных данных». Подготовка к сертификации ISO 27001.',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function Security() {
             <div className="grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-navy-50">
                 <div className="text-3xl font-bold text-navy mb-1">99.9%</div>
-                <div className="text-xs text-navy/60">SLA uptime</div>
+                <div className="text-xs text-navy/60">Доступность сервиса</div>
               </div>
               <div className="p-5 rounded-2xl bg-navy-50">
                 <div className="text-3xl font-bold text-navy mb-1">&lt;100мс</div>
@@ -62,7 +62,7 @@ export default function Security() {
               </div>
               <div className="p-5 rounded-2xl bg-navy-50">
                 <div className="text-3xl font-bold text-navy mb-1">100%</div>
-                <div className="text-xs text-navy/60">Data residency KZ</div>
+                <div className="text-xs text-navy/60">Хранение данных в РК</div>
               </div>
               <div className="p-5 rounded-2xl bg-navy-50">
                 <div className="text-3xl font-bold text-navy mb-1">6ч</div>

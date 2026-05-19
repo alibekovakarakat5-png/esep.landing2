@@ -34,7 +34,7 @@ export default function Nav() {
           <div>
             <div className="font-bold text-navy text-lg leading-tight">Esep</div>
             <div className="text-[10px] uppercase tracking-widest text-navy-400 font-semibold leading-tight">
-              Enterprise
+              Для бизнеса
             </div>
           </div>
         </a>

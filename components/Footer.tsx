@@ -13,14 +13,14 @@ export default function Footer() {
               <div>
                 <div className="font-bold text-white text-lg">Esep</div>
                 <div className="text-[10px] uppercase tracking-widest text-white/40 font-semibold">
-                  Enterprise
+                  Для бизнеса
                 </div>
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-md">
-              Compliance Infrastructure для платформенной экономики
+              Налоговое сопровождение для платформенной экономики
               Казахстана. Закрываем обязательства налогового агента
-              по НК РК 2026 одним API.
+              по Налоговому кодексу 2026 — одним сервисом.
             </p>
           </div>
 

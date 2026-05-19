@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-white/80 text-xs font-medium">
             <Sparkles className="w-3.5 h-3.5 text-accent-green" />
             <span className="uppercase tracking-wider">
-              Compliance Infrastructure для НК РК 2026
+              Сервис для платформ под Налоговый кодекс 2026
             </span>
           </div>
         </motion.div>
@@ -39,10 +39,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05] text-balance"
         >
-          Один API закрывает{' '}
-          <span className="gradient-text-light">всё compliance</span>
+          Один сервис для всех{' '}
+          <span className="gradient-text-light">требований нового</span>
           <br />
-          вашей платформы.
+          Налогового кодекса.
         </motion.h1>
 
         {/* Подзаголовок */}
@@ -53,8 +53,9 @@ export default function Hero() {
           className="mt-8 text-center text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed text-balance"
         >
           Для курьерских служб, маркетплейсов и агрегаторов Казахстана.
-          Валидация ИИН, контроль лимита 300 МРП, фискализация выплат
-          самозанятым, отчётность в КГД — всё через единый интерфейс.
+          Подключение за 14 дней. Проверка курьеров, контроль лимита
+          300 МРП, выдача фискальных чеков, отчётность в КГД — в одной
+          системе.
         </motion.p>
 
         {/* CTA-кнопки */}
@@ -87,10 +88,10 @@ export default function Hero() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden glass-dark"
         >
           {[
-            { value: '2 недели', label: 'Срок внедрения' },
-            { value: '99.9%', label: 'SLA uptime' },
-            { value: '< 100 мс', label: 'Время ответа' },
-            { value: '1 договор', label: 'С КГД на всех' },
+            { value: '14 дней', label: 'Срок внедрения' },
+            { value: '99.9%', label: 'Доступность сервиса' },
+            { value: '< 100 мс', label: 'Скорость ответа' },
+            { value: '1 договор', label: 'С КГД на всех клиентов' },
           ].map((stat, i) => (
             <div
               key={i}

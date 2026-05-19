@@ -26,10 +26,10 @@ export default function Architecture() {
             <span className="gradient-text-light">и государством.</span>
           </h2>
           <p className="mt-6 text-lg text-white/60 leading-relaxed">
-            Платформа интегрируется только с нашим API. Все договоры
-            с КГД, ОФД и внешними реестрами держим мы — обновления
-            законодательства закрываются на нашей стороне без правок
-            в вашем коде.
+            Платформа подключается только к нашему сервису. Все договоры
+            с КГД, операторами фискальных данных и внешними реестрами
+            ведём мы — изменения в законе закрываются на нашей стороне
+            без правок в вашей системе.
           </p>
         </motion.div>
 
@@ -101,13 +101,13 @@ export default function Architecture() {
                 className="relative mx-auto max-w-[280px] p-6 rounded-2xl bg-gradient-to-br from-sky-500 to-accent-green text-white text-center shadow-2xl shadow-sky-500/30"
               >
                 <div className="text-xs uppercase tracking-widest text-white/80 mb-2 font-bold">
-                  Esep Platform API
+                  Esep для бизнеса
                 </div>
                 <div className="text-2xl font-bold mb-3">api.esepkz.com</div>
                 <div className="text-xs text-white/80 leading-relaxed">
-                  Один X-Platform-Key.<br />
-                  Всё compliance в одном API.<br />
-                  SLA 99.9%.
+                  Один корпоративный ключ.<br />
+                  Все требования закона.<br />
+                  Доступность 99.9%.
                 </div>
               </motion.div>
             </div>
@@ -118,10 +118,10 @@ export default function Architecture() {
                 Государственные системы
               </div>
               {[
-                'КГД ИСНА (knp.kgd.gov.kz)',
-                'Webkassa / ОФД',
-                'stat.gov.kz реестр',
-                'ЭСФ esf.gov.kz',
+                'Кабинет налогоплательщика КГД',
+                'Оператор фискальных данных',
+                'Реестр налогоплательщиков',
+                'Информационная система ЭСФ',
               ].map((x, i) => (
                 <motion.div
                   key={x}
