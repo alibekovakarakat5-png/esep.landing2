@@ -57,21 +57,29 @@ export default function Nav() {
           </a>
         </div>
 
-        <a
-          href="#cta"
-          className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy text-white text-sm font-semibold hover:bg-navy-700 transition-all shadow-lg shadow-navy/20 hover:shadow-navy/40"
-        >
-          Запросить демо
-          <svg
-            className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2.5}
+        <div className="flex items-center gap-2">
+          <a
+            href="tel:+77059914789"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-navy text-sm font-semibold hover:bg-navy-50 transition-all"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
+            +7 705 991 47 89
+          </a>
+          <a
+            href="#cta"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy text-white text-sm font-semibold hover:bg-navy-700 transition-all shadow-lg shadow-navy/20 hover:shadow-navy/40"
+          >
+            Связаться
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </motion.nav>
   );

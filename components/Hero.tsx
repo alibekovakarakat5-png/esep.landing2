@@ -69,7 +69,7 @@ export default function Hero() {
             href="#cta"
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-navy font-semibold shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 hover:scale-[1.02] transition-all"
           >
-            Запросить корпоративное демо
+            Связаться с менеджером
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a

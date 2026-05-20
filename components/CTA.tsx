@@ -2,7 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, MessageCircle, Phone } from 'lucide-react';
+
+const PHONE = '+7 705 991 47 89';
+const PHONE_TEL = '+77059914789';
+const WHATSAPP_TEXT = encodeURIComponent(
+  'Здравствуйте! Интересует подключение к Esep для бизнеса.',
+);
+const WHATSAPP_URL = `https://wa.me/77059914789?text=${WHATSAPP_TEXT}`;
 
 export default function CTA() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,9 +54,50 @@ export default function CTA() {
             <span className="gradient-text-light">без боли?</span>
           </h2>
           <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Расскажите о своей платформе — пришлём коммерческое предложение
-            под ваш объём в течение одного рабочего дня.
+            Свяжитесь с менеджером — обсудим вашу задачу и пришлём
+            индивидуальное предложение в течение одного рабочего дня.
           </p>
+        </motion.div>
+
+        {/* Главный путь — WhatsApp + телефон */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="max-w-3xl mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-3"
+        >
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center gap-3 px-6 py-5 rounded-2xl bg-accent-green hover:bg-emerald-600 text-white font-semibold shadow-2xl shadow-accent-green/20 hover:shadow-accent-green/40 hover:scale-[1.01] transition-all"
+          >
+            <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
+            <span>Написать в WhatsApp</span>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="group flex items-center justify-center gap-3 px-6 py-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold transition-all"
+          >
+            <Phone className="w-5 h-5" strokeWidth={2.5} />
+            <span>{PHONE}</span>
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mb-6"
+        >
+          <div className="inline-flex items-center gap-2 text-white/40 text-xs">
+            <span className="h-px w-12 bg-white/10" />
+            или оставьте заявку — менеджер свяжется сам
+            <span className="h-px w-12 bg-white/10" />
+          </div>
         </motion.div>
 
         <motion.div
