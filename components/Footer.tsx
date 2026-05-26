@@ -29,10 +29,12 @@ export default function Footer() {
               Продукт
             </h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#services" className="hover:text-white transition-colors">9 сервисов</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Тарифы</a></li>
-              <li><a href="#process" className="hover:text-white transition-colors">Внедрение</a></li>
-              <li><a href="#security" className="hover:text-white transition-colors">Безопасность</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">9 сервисов</a></li>
+              <li><a href="/#pricing" className="hover:text-white transition-colors">Тарифы</a></li>
+              <li><a href="/#process" className="hover:text-white transition-colors">Внедрение</a></li>
+              <li><a href="/#security" className="hover:text-white transition-colors">Безопасность</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors">Статьи</a></li>
+              <li><a href="/iin" className="hover:text-white transition-colors">ИИН-валидатор</a></li>
             </ul>
           </div>
 
@@ -60,7 +62,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#cta" className="hover:text-white transition-colors">
+                <a href="/#cta" className="hover:text-white transition-colors">
                   Оставить заявку
                 </a>
               </li>
