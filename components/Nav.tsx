@@ -40,19 +40,22 @@ export default function Nav() {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-navy-500">
-          <a href="#services" className="hover:text-navy transition-colors">
+          <a href="/#services" className="hover:text-navy transition-colors">
             Сервисы
           </a>
-          <a href="#process" className="hover:text-navy transition-colors">
+          <a href="/#process" className="hover:text-navy transition-colors">
             Внедрение
           </a>
-          <a href="#pricing" className="hover:text-navy transition-colors">
+          <a href="/#pricing" className="hover:text-navy transition-colors">
             Тарифы
           </a>
-          <a href="#security" className="hover:text-navy transition-colors">
+          <a href="/#security" className="hover:text-navy transition-colors">
             Безопасность
           </a>
-          <a href="#faq" className="hover:text-navy transition-colors">
+          <a href="/blog" className="hover:text-navy transition-colors">
+            Статьи
+          </a>
+          <a href="/#faq" className="hover:text-navy transition-colors">
             FAQ
           </a>
         </div>
@@ -65,7 +68,7 @@ export default function Nav() {
             +7 705 991 47 89
           </a>
           <a
-            href="#cta"
+            href="/#cta"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy text-white text-sm font-semibold hover:bg-navy-700 transition-all shadow-lg shadow-navy/20 hover:shadow-navy/40"
           >
             Связаться
