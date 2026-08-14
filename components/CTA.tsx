@@ -11,21 +11,47 @@ const WHATSAPP_TEXT = encodeURIComponent(
 );
 const WHATSAPP_URL = `https://wa.me/77059914789?text=${WHATSAPP_TEXT}`;
 
+const LEAD_API = 'https://api.esepkz.com/api/lead';
+
 export default function CTA() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    const data = new FormData(e.currentTarget);
+    setError(null);
 
-    // TODO: подключить реальный POST на esep API когда будет endpoint
-    // await fetch('/api/leads', { method: 'POST', body: data });
-    await new Promise((r) => setTimeout(r, 800));
+    const fd = new FormData(e.currentTarget);
+    const size = String(fd.get('size') || '');
 
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch(LEAD_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fd.get('contact'),
+          company: fd.get('company'),
+          phone: fd.get('phone'),
+          email: fd.get('email'),
+          interest: size ? `Platform API, размер: ${size}` : 'Platform API',
+          comment: fd.get('message'),
+          source: 'business-landing',
+          sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+          website: fd.get('website'), // honeypot — заполняют только боты
+        }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setSubmitted(true);
+    } catch {
+      // Заявку терять нельзя: показываем запасной путь вместо ложного «успешно».
+      setError(
+        'Не удалось отправить заявку. Напишите нам в WhatsApp — ответим сразу.',
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -166,6 +192,25 @@ export default function CTA() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 )}
               </button>
+
+              {/* honeypot: скрыт от людей, видим ботам */}
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
+
+              {error && (
+                <p className="md:col-span-2 text-sm text-center text-red-300">
+                  {error}{' '}
+                  <a href={WHATSAPP_URL} className="underline font-semibold">
+                    Написать в WhatsApp
+                  </a>
+                </p>
+              )}
 
               <p className="md:col-span-2 text-xs text-white/40 text-center">
                 Нажимая «Получить», вы соглашаетесь на обработку персональных
