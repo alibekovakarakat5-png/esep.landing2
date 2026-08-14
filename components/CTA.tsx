@@ -148,7 +148,7 @@ export default function CTA() {
             </div>
           ) : (
             <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Field name="company" label="Компания" required placeholder="ТОО Курьерская служба" />
+              <Field name="company" label="Компания" required placeholder="ТОО Курьерская служба / Таксопарк" />
               <Field name="contact" label="Контактное лицо" required placeholder="Имя Фамилия" />
               <Field name="email" type="email" label="Email" required placeholder="ceo@company.kz" />
               <Field name="phone" label="Телефон" required placeholder="+7 777 000 00 00" />
@@ -163,7 +163,7 @@ export default function CTA() {
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-sky-400 transition-colors"
                 >
                   <option value="" className="bg-navy">Выберите...</option>
-                  <option value="<1000" className="bg-navy">До 1 000 курьеров / продавцов</option>
+                  <option value="<1000" className="bg-navy">До 1 000 курьеров, водителей или продавцов</option>
                   <option value="1k-10k" className="bg-navy">1 000 – 10 000</option>
                   <option value="10k-100k" className="bg-navy">10 000 – 100 000</option>
                   <option value="100k+" className="bg-navy">Более 100 000</option>

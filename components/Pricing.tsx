@@ -6,7 +6,7 @@ import { Check, Settings2 } from 'lucide-react';
 const TIERS = [
   {
     name: 'Старт',
-    desc: 'Для малых платформ до 1 000 курьеров',
+    desc: 'Для малых платформ до 1 000 курьеров или водителей',
     monthly: 'от 200 000',
     monthlyHint: '₸ / мес',
     features: [
@@ -21,7 +21,7 @@ const TIERS = [
   },
   {
     name: 'Бизнес',
-    desc: 'Для средних платформ 1 000 – 10 000 курьеров',
+    desc: 'Для средних платформ 1 000 – 10 000 курьеров или водителей',
     monthly: 'от 800 000',
     monthlyHint: '₸ / мес',
     features: [

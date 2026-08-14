@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 text-center text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed text-balance"
         >
-          Для курьерских служб, маркетплейсов и агрегаторов Казахстана.
+          Для курьерских служб, таксопарков, маркетплейсов и агрегаторов Казахстана.
           Подключение за 14 дней. Проверка курьеров, контроль лимита
           300 МРП, выдача фискальных чеков, отчётность в КГД — в одной
           системе.
